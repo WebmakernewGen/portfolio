@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhijith A K | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+      emailjs.init("j-mVY4GtJoVpB_2Jb"); // Replace with your EmailJS public key
+  })();
+</script>
+
+</head>
+<body>
+  <!-- Header -->
+<header>
+  <div class="header-container">
+    <img src="profile.jpg" alt="Abhijith A K" class="profile-pic">
+    <h1>Hi, I'm Abhijith A K 👋</h1>
+
+    <!-- Buttons in top-right -->
+    <div class="header-buttons">
+  <!-- Resume button -->
+  <button onclick="window.location.href='resume.pdf'" class="resume-btn">📄</button>
+  
+  <!-- Dark mode toggle -->
+  <button id="darkToggle" class="toggle-icon">🌙</button>
+</div>
+
+  </div>
+
+  <p>Developer</p>
+  <p>abhijithkaplanickal@gmail.com | 8943383964</p>
+  <p><a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></p>
+</header>
+
+
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Diploma in Computer Engineering graduate with 3.4 years of professional experience in technical roles (Telecom & IT Support). Recently upskilled in software development with hands-on projects in Python, Java, and Web Development. Seeking an entry-level developer role where I can apply programming skills and grow as a software professional.</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Programming Languages: Python</li>
+      <li>Web Development: HTML, CSS</li>
+      <li>Database: MySQL</li>
+      <li>Tools & Platforms: Git, VS Code</li>
+      <li>Concepts: OOP</li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <li>Portfolio Website – Built with HTML & CSS, showcasing skills and resume (Hosted on GitHub Pages).</li>
+  </section>
+
+<!-- Experience -->
+  <section id="experience">
+    <div>   
+    <h2>Experience</h2>
+    <p><strong>Facilities Technician</strong><br>Saintgits College of Engineering | Jan 2025 - Present</p>
+    <ul>
+    <li>Provided technical support for hardware/software, improving system uptime by troubleshooting and issue resolution.</li>
+    <li>Assisted in managing campus networks and system configurations.</li>
+    <li>Maintained inventory of IT assets and coordinated with vendors for procurement and repairs.</li>
+    <li>Exposure to scripting and automation for repetitive tasks.</li>
+    </ul>
+    </div>
+    <p><strong>Telecom Engineer</strong><br>Immco | April 2022 - Dec 2024</p>
+    <ul> 
+    <li>Worked on telecom fiber network design & as-built projects (FTTX, EPON).</li>
+    <li> AutoCAD, Magellan, SpatialNet for network planning and documentation.</li>
+    <li>Coordinated with field teams for right-of-way permitting and technical approvals.</li>
+  </ul>
+</section>
+
+<!-- Education -->
+  <section id="Education">
+    <h2>Education</h2>
+    <li>Diploma in Computer Engineering – Govt. Polytechnic College, Kottayam (2021).</li>
+  </section>
+
+  <!-- Cirtification -->
+  <section id="certification">
+    <h2>Cirtification</h2>
+    <li>Python for Everybody – Coursera</li>
+  </section>
+
+  <!-- Contact -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form id="contactForm">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="from_name" required><br><br>
+
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="from_email" required><br><br>
+
+  <label for="message">Message:</label><br>
+  <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+  <button type="submit">Send Message</button>
+</form>
+
+</section>
+<script>
+ document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+(function(){
+    emailjs.init("j-mVY4GtJoVpB_2Jb"); // Replace with your actual Public Key
+})();
+
+   emailjs.sendForm("service_4fu9txw", "template_8d65vpd", this)
+    .then(() => {
+      alert("✅ Message sent successfully!");
+      this.reset();
+    }, (error) => {
+      alert("❌ Failed to send message. Check console.");
+      console.log("EmailJS Error:", error);
+    });
+});
+</script>
+
+  <script src="script.js"></script>
+</body>
+</html>
